@@ -17,15 +17,26 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
-  * Description
+  * [Description](#description)
+  * [Install Instructions](#install-instructions)
+  * [Usage](#usage)
+  * [Licenses](#licenses)
+  * [Questions](#questions)
+
+  ## Description  
     ${data.description}
-  * Install Instructions
+
+  ## Install Instructions
     ${data.install}
-  * Usage
+
+  ## Usage
     ${data.usage}
-  * Licenses
-  * Questions
-  ### Questions? Contact Me At:
+
+  ## Licenses
+  ${renderLicenseSection(data.license)}
+  ${renderLicenseLink(data.license)}
+
+  ## Questions? Contact Me At:
   [${data.username}(https://github.com/${data.username})]
   ${data.email}
 `;
